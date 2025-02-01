@@ -1,11 +1,11 @@
 # Fetch_Assessment
-Receipt Processor - Spring Boot API
+**Receipt Processor - Spring Boot API**
 
-Overview
+**Overview**
 
 This project is a Receipt Processor API built using Spring Boot and Docker. It allows users to submit receipts and calculates points based on predefined rules.
 
-Features
+**Features**
 
 POST /receipts/process: Submits a receipt and returns a unique ID.
 
@@ -13,7 +13,7 @@ GET /receipts/{id}/points: Returns the points earned for a receipt.
 
 Dockerized for easy deployment.
 
-Technologies Used
+**Technologies Used**
 
 Java 17
 
@@ -23,11 +23,9 @@ Maven
 
 Docker
 
-PostgreSQL (Optional, for persistence)
-
 Setup Instructions
 
-1️⃣ Prerequisites
+**1️⃣ Prerequisites**
 
 Ensure you have installed:
 
@@ -37,12 +35,12 @@ Apache Maven (Download Here)
 
 Docker (Download Here)
 
-2️⃣ Clone the Repository
+**2️⃣ Clone the Repository**
 
 git clone https://github.com/your-repo/receipt-processor.git
 cd receipt-processor
 
-3️⃣ Build the JAR File
+**3️⃣ Build the JAR File**
 
 Run the following command to package the Spring Boot application:
 
@@ -50,46 +48,34 @@ mvn clean package -DskipTests
 
 This generates a JAR file inside the target/ directory.
 
-4️⃣ Run Locally (Without Docker)
+**4️⃣ Run Locally (Without Docker)**
 
 java -jar target/receipt-processor.jar
 
-The API will be available at:
+**Docker Instructions**
 
-Swagger UI: http://localhost:8080/swagger-ui.html
-
-Docker Instructions
-
-5️⃣ Build the Docker Image
+**5️⃣ Build the Docker Image**
 
 Ensure your Dockerfile is correctly set up, then build the image:
 
 docker build -t receipt-processor .
 
-6️⃣ Run the Docker Container
+**6️⃣ Run the Docker Container**
 
 docker run -p 8080:8080 receipt-processor
 
-The API will be accessible at:
 
-Swagger UI: http://localhost:8080/swagger-ui.html
-
-7️⃣ Verify Running Containers
+**7️⃣ Verify Running Containers**
 
 To check if the container is running, use:
 
 docker ps
 
-To stop and remove the container:
+**API Endpoints**
 
-docker stop <container_id>
-docker rm <container_id>
+**Process Receipt**
 
-API Endpoints
-
-Process Receipt
-
-Request:
+**Request:**
 
 POST /receipts/process
 
